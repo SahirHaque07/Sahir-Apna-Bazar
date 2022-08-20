@@ -51,18 +51,28 @@ const Homescreen = () => {
       ) : error ? (
         <Message>{error}</Message>
       ) : (
-        <Container>
-          <Row className="container">
+        <Container
+          style={{
+            display: "flex",
+            maxWidth: "100%",
+            marginLeft: "3rem",
+          }}
+          className="p-container"
+        >
+          <Row>
             {products.map((product) => (
               <Col
                 key={product._id}
-                className="mt-5 my-2 "
+                className="mt-2 my-2 mx-3 ml-5 "
                 sm={12}
-                md={6}
+                md={5}
                 lg={4}
-                xl={3}
+                xl={2}
               >
-                <Card style={{ width: "18rem", height: "40rem" }}>
+                <Card
+                  style={{ width: "18rem", height: "40rem" }}
+                  className="p-card"
+                >
                   <div>
                     <Link to={`/product/${product._id}`}>
                       <Card.Img

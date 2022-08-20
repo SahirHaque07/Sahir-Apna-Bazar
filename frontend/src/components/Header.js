@@ -35,14 +35,13 @@ const Header = () => {
       <Navbar className="navbar navbar-dark bg-primary" expand="lg">
         <Container>
           <LinkContainer to="/">
-            <Navbar.Brand>Ekart</Navbar.Brand>
+            <Navbar.Brand>Apna Bazaar</Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
+              style={{ maxHeight: "130px", zIndex: "100" }}
             >
               <LinkContainer to="/">
                 <Nav.Link>Home</Nav.Link>
@@ -54,7 +53,11 @@ const Header = () => {
               </LinkContainer>
 
               {userInfo ? (
-                <NavDropdown title={userInfo.name} id="username">
+                <NavDropdown
+                  title={userInfo.name}
+                  id="username"
+                  style={{ zIndex: "100" }}
+                >
                   <LinkContainer to="profile">
                     <NavDropdown.Item>Profile</NavDropdown.Item>
                   </LinkContainer>

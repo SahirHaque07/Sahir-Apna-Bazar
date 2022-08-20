@@ -31,3 +31,20 @@ main {
   display: block;
   margin:auto;
 }
+
+
+  @media screen and (max-width: 500px) {
+    .p-container{
+      margin-left:0 !important;
+      /* margin-right: 50px !important; */
+      
+    }
+    .p-card{
+      width:102% !important;
+      position: relative !important;
+      right: 20px !important;
+      /* background-color: transparent !important;  */
+      /* border: 2px solid !important; */
+    }
+
+  }
